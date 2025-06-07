@@ -1,4 +1,4 @@
-i<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -33,6 +33,7 @@ i<!DOCTYPE html>
       margin-top: 5px;
       border-radius: 5px;
       border: 1px solid #ccc;
+      box-sizing: border-box;
     }
     .history-box, ul {
       background: #f9f9f9;
@@ -49,6 +50,7 @@ i<!DOCTYPE html>
       background-color: #2a5d84;
       color: white;
       cursor: pointer;
+      border: none;
     }
     button:hover {
       background-color: #1f4564;
@@ -67,7 +69,7 @@ i<!DOCTYPE html>
     <input type="file" accept="image/*">
   </div>
 
-  <form id="ehrForm" onsubmit="event.preventDefault(); alert('Record Saved!')">
+  <form id="ehrForm" onsubmit="saveRecord(event)">
     <label>Patient Name:</label>
     <input type="text" id="name" value="John Doe" required />
 
@@ -118,7 +120,11 @@ i<!DOCTYPE html>
     if (dob) {
       const birthDate = new Date(dob);
       const today = new Date();
-      const age = today.getFullYear() - birthDate.getFullYear();
+      let age = today.getFullYear() - birthDate.getFullYear();
+      const m = today.getMonth() - birthDate.getMonth();
+      if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+      }
       ageField.value = age;
     }
   }
@@ -138,6 +144,11 @@ i<!DOCTYPE html>
     document.getElementById("ehrForm").reset();
     document.getElementById("medList").innerHTML = "";
     document.getElementById("age").value = "";
+  }
+
+  function saveRecord(event) {
+    event.preventDefault();
+    alert("Record Saved!");
   }
 </script>
 
