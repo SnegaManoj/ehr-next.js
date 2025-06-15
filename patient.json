@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "age": 45,
+    "gender": "Male",
+    "allergies": "Penicillin",
+    "notes": "Patient complains of frequent headaches and blurry vision.",
+    "medicalHistory": ["Diabetes", "High Blood Pressure"]
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "age": 33,
+    "gender": "Female",
+    "allergies": "None",
+    "notes": "Recovering from recent knee surgery.",
+    "medicalHistory": ["Asthma"]
+  },
+  {
+    "id": 3,
+    "name": "Ali Khan",
+    "age": 52,
+    "gender": "Male",
+    "allergies": "Peanuts",
+    "notes": "Complains of chest pain during physical activity.",
+    "medicalHistory": ["High Cholesterol"]
+  },
+  {
+    "id": 4,
+    "name": "Meera Iyer",
+    "age": 27,
+    "gender": "Female",
+    "allergies": "Dust, Pollen",
+    "notes": "Reports severe seasonal allergies.",
+    "medicalHistory": ["Sinusitis"]
+  },
+  {
+    "id": 5,
+    "name": "Carlos Ruiz",
+    "age": 60,
+    "gender": "Male",
+    "allergies": "Latex",
+    "notes": "Shows signs of early arthritis in joints.",
+    "medicalHistory": ["Hypertension", "Arthritis"]
+  },
+  {
+    "id": 6,
+    "name": "Aditi Sharma",
+    "age": 39,
+    "gender": "Female",
+    "allergies": "Shellfish",
+    "notes": "Under observation for thyroid issues.",
+    "medicalHistory": ["Hypothyroidism"]
+  },
+  {
+    "id": 7,
+    "name": "Liam O'Connor",
+    "age": 21,
+    "gender": "Male",
+    "allergies": "None",
+    "notes": "Complains of fatigue and insomnia.",
+    "medicalHistory": ["Anemia"]
+  },
+  {
+    "id": 8,
+    "name": "Sara Lee",
+    "age": 50,
+    "gender": "Female",
+    "allergies": "Penicillin, Nuts",
+    "notes": "Monitoring blood sugar closely.",
+    "medicalHistory": ["Type 2 Diabetes"]
+  },
+  {
+    "id": 9,
+    "name": "Ravi Menon",
+    "age": 44,
+    "gender": "Male",
+    "allergies": "None",
+    "notes": "Regular smoker; chest x-ray recommended.",
+    "medicalHistory": ["COPD"]
+  },
+  {
+    "id": 10,
+    "name": "Emily Nguyen",
+    "age": 29,
+    "gender": "Female",
+    "allergies": "None",
+    "notes": "Has migraine history; suggest neurologist consult.",
+    "medicalHistory": ["Migraine"]
+  }
+]
