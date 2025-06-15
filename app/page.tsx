@@ -2,6 +2,8 @@
 "use client"
 import PatientForm from "@/Components/patientForm";
 import { useRouter } from "next/navigation";
+import { Analytics } from '@vercel/analytics/react';
+
 export default function Home() {
     const router = useRouter();
 
@@ -20,6 +22,7 @@ export default function Home() {
     
     </div>
       <PatientForm />
+      <Analytics />
     </div>
   );
 }
