@@ -1,6 +1,6 @@
 import { collection, addDoc } from "firebase/firestore";
 import { Patient } from "./usePatientData";
-import { db } from "@/app/utils/firebase";
+import { db } from "../utils/firebase";
 
 export default function useAddPatient() {
   const addPatient = async (patient: Patient) => {

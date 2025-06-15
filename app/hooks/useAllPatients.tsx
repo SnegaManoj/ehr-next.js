@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
-import { db } from "@/app/utils/firebase";
+import { db } from "../utils/firebase";
 
 export interface Patient {
   id: string;

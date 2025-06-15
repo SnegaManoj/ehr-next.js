@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
 import { Patient } from "./usePatientData";
-import { db } from "@/app/utils/firebase";
+import { db } from "../utils/firebase";
 
 export default function usePatientById(id: string) {
   const [patient, setPatient] = useState<Patient | null>(null);
