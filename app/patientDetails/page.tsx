@@ -1,5 +1,5 @@
 "use client";
-import usePatientById from "@/app/Components/hooks/usePatientById";
+import usePatientById from "@/app/hooks/usePatientById";
 import { useParams, useRouter } from "next/navigation";
 
 export default function PatientDetailPage() {

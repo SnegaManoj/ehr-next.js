@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import usePatientData from "@/app/Components/hooks/usePatientData";
-import useAddPatient from "@/app/Components/hooks/useAddPatient";
+import usePatientData from "@/app/hooks/usePatientData";
+import useAddPatient from "@/app/hooks/useAddPatient";
 
 export default function PatientForm() {
   const { patient, setPatient } = usePatientData();

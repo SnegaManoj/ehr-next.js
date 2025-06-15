@@ -1,5 +1,5 @@
 "use client";
-import useAllPatients from "@/app/Components/hooks/useAllPatients";
+import useAllPatients from "@/app/hooks/useAllPatients";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
