@@ -1,6 +1,6 @@
 
 "use client"
-import PatientForm from "@/Components/patientForm";
+import PatientForm from "@/app/Components/patientForm";
 import { useRouter } from "next/navigation";
 import { Analytics } from '@vercel/analytics/react';
 
