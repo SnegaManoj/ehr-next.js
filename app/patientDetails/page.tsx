@@ -1,42 +1,34 @@
 "use client";
-import { useRouter } from "next/navigation";
-import usePatientData from "@/hooks/usePatientData";
-import Image from "next/image";
+import usePatientById from "@/hooks/usePatientById";
+import { useParams, useRouter } from "next/navigation";
 
-export default function PatientDetails() {
+export default function PatientDetailPage() {
+  const params = useParams();
   const router = useRouter();
-  const { patient } = usePatientData();
+  const id = params?.id as string;
+  const { patient, loading } = usePatientById(id);
 
-  const goBack = () => {
-    router.push("/"); // Navigate to home page
-  };
+  if (loading) return <p>Loading patient details...</p>;
+  if (!patient) return <p>Patient not found</p>;
 
   return (
-    <div className="container">
-      <h1>Patient Details</h1>
-
-      <div className="photo">
-        <Image src="/placeholder.png" alt="Patient Photo" width={120} height={120} />
-      </div>
-
+    <div className="p-4">
+      <h1 className="text-2xl font-bold mb-4">Patient Details</h1>
       <p><strong>Name:</strong> {patient.name}</p>
       <p><strong>Age:</strong> {patient.age}</p>
       <p><strong>Gender:</strong> {patient.gender}</p>
-
-      <p><strong>Medical History:</strong></p>
-      <ul>
-        {patient.medicalHistory.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
-
       <p><strong>Allergies:</strong> {patient.allergies}</p>
       <p><strong>Doctor's Notes:</strong> {patient.notes}</p>
+      <p><strong>Medical History:</strong> {patient.medicalHistory.join(", ")}</p>
 
-      {/* Back button */}
-      <button onClick={goBack} style={{ marginTop: "20px" }}>
-        Go Back to Home
+      <button
+        onClick={() => router.push("/")}
+        className="mt-6 px-4 py-2 bg-blue-500 text-white rounded"
+      >
+        Back to Home
       </button>
     </div>
   );
 }
+
+
