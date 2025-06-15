@@ -1,6 +1,7 @@
-import { useState } from "react";
+"use client";
+import { useState, useEffect } from "react";
 
-export interface Patient {
+interface Patients {
   name: string;
   age: number;
   gender: string;
@@ -8,16 +9,21 @@ export interface Patient {
   notes: string;
   medicalHistory: string[];
 }
-
 export default function usePatientData() {
-  const [patient, setPatient] = useState<Patient>({
-    name: "",
-    age: 0,
-    gender: "",
-    allergies: "",
-    notes: "",
-    medicalHistory: [],
-  });
+  const [patient, setPatient] = useState<Patients>({
+  name: "",
+  age: 0,
+  gender: "",
+  medicalHistory: [],
+  allergies: "",
+  notes: "",
+});
+
+
+  useEffect(() => {
+    console.log("Patient data loaded");
+    // Optional: fetch data from API
+  }, []);
 
   return { patient, setPatient };
 }
